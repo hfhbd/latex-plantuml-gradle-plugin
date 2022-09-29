@@ -24,7 +24,7 @@ gradlePlugin {
         }
         create("pluginExtensions") {
             id = "pluginextensions"
-            implementationClass = "ExtensionsPlugin"
+            implementationClass = "Issue16929Plugin"
         }
     }
 }

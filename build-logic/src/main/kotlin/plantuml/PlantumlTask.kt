@@ -36,8 +36,8 @@ abstract class PlantumlTask : DefaultTask() {
     @TaskAction
     fun action(inputChanges: InputChanges) {
         val queue = workerExecutor.noIsolation()
-        inputChanges.getFileChanges(source).forEach { change ->
-            if (change.fileType == FileType.DIRECTORY) return@forEach
+        for (change in inputChanges.getFileChanges(source)) {
+            if (change.fileType == FileType.DIRECTORY) continue
 
             val targetFile = outputFolder.file(change.normalizedPath).get().asFile
             if (change.changeType == ChangeType.REMOVED) {
