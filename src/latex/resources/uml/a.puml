@@ -1,0 +1,16 @@
+@startuml
+!pragma layout smetana
+
+start
+if (i % 3 == 0 && i % 5 ==0) then (true)
+  :call subroutine|
+endif
+stop
+
+package subroutine
+start
+if (%i == 3) then (true)
+  :i+=1;
+endif
+stop
+@enduml

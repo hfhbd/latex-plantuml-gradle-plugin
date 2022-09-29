@@ -1,0 +1,18 @@
+\documentclass{article}
+\usepackage[
+    backend=biber,
+    bibencoding=utf8,
+]{biblatex}
+\addbibresource{main.bib}
+
+\usepackage{graphicx}
+
+\begin{document}
+    Hello Kotlin\cite{KotlinRelease}
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.9\textwidth]{../../../build/latex/uml/a}
+        \caption{Generated with PlantUML}
+        \label{fig:gen}
+    \end{figure}
+\end{document}
