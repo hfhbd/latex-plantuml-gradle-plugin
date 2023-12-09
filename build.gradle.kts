@@ -1,6 +1,6 @@
 plugins {
-    latex
-    plantuml
+    id("latex")
+    id("plantuml")
 }
 
 tasks {
